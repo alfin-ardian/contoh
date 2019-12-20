@@ -1,0 +1,76 @@
+<script type="text/javascript">
+	function hitung()
+	{
+		var angka = document.forms['nilai'].angka.value;
+		var kelulusan = "lulus";
+		if (angka >= 50 && angka <= 100) kelulusan = "lulus";
+		else kelulusan = "tidak lulus";
+			if (angka >= 85 && angka <= 100){
+			ket = "A";
+			}
+		else if (angka <= 84 && angka >= 80){
+			ket ="A-";
+		}
+		else if (angka <= 79 && angka >= 75){
+			ket ="B";
+		}
+		else if (angka <= 74 && angka >= 70){
+			ket ="B-";
+		}
+		else if (angka <= 69 && angka >= 65){
+			ket ="C";
+		}
+		else if (angka <= 64 && angka >= 50){
+			ket ="C-";
+		}
+		else if (nilai <= 49 && angka >= 45){
+			ket ="D";
+		}
+		else if (angka <= 44 && angka >= 10){
+			ket ="E";
+		}
+		document.forms['nilai'].grade.value = ket;
+		document.forms['nilai'].kel.value = kelulusan;
+			}
+
+
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grade</title>
+
+</head>
+<body>
+<form name="nilai" action="#" method="POST">
+	<table align="center" cellspacing="0" cellpadding="2" border="1">
+		<tr>
+			<th colspan="2">grade kelulusan</th>
+		</tr>
+		<tr>
+			<td>input nilai</td>
+			<td>
+				<input type="text" name="angka">
+			</td>
+		</tr>
+		<tr>
+			<td>kelulusan</td>
+			<td>
+				<input type="text" name="kel" disabled>
+			</td>
+		</tr>
+		<tr>
+			<td>huruf</td>
+			<td>
+				<input type="text" name="grade" disabled>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="button" name="" value="cek nilai" onclick="javascript:hitung()">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
